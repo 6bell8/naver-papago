@@ -29,7 +29,8 @@ app.get("/papago", (req, res) => {
       "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
     },
   }).then((response) => {
-    console.log(response.data.message.result.translatedText);
+    // console.log(response.data.message.result.translatedText);
+    res.send(response.data.message.result.translatedText);
   });
 });
 app.listen(port, () => {
